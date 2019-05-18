@@ -20,6 +20,12 @@ The recommended way is to use the (again, very simple) docker image to run a com
 docker run sebric/bitbucket-cli:latest {COMMAND_NAME} --help
 ```
 
+Nevertheless, there might be a outdated version at npm also.
+```sh
+npm install --global bitbucket-cli
+bitbucket-cli --version
+```
+
 ## Commands
 
 ### create-pull-request
