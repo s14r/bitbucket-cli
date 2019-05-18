@@ -1,10 +1,13 @@
 {
-  "name": "bitbucket-helper",
+  "name": "bitbucket-cli",
   "version": "1.0.0",
-  "description": "Bitbucket Helper :)",
+  "description": "Mini Mini Mini Bitbucket CLI",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "bitbucket-cli": "bitbucket-cli.js"
   },
   "author": "sebric",
   "license": "MIT",
