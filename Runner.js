@@ -1,6 +1,7 @@
 const fs = require('fs')
 const path = require('path')
 const commander = require('commander')
+const pkg = require('./package.json')
 
 /**
  * Helping Hand for running programs from a given directory
@@ -47,7 +48,9 @@ class Runner {
    * Parses Arguments and runs commands
    */
   run () {
-    commander.parse(process.argv)
+    commander
+      .version(`Bitbucket CLI ${pkg.version}`)
+      .parse(process.argv)
 
     if (!process.argv.slice(2).length) {
       commander.outputHelp()
