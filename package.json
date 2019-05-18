@@ -1,6 +1,6 @@
 {
   "name": "bitbucket-cli",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Mini Mini Mini Bitbucket CLI",
   "main": "index.js",
   "scripts": {
