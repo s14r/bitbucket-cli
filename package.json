@@ -2,6 +2,10 @@
   "name": "bitbucket-cli",
   "version": "0.1.1",
   "description": "Mini Mini Mini Bitbucket CLI",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sebric/bitbucket-cli"
+  },
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
