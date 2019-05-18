@@ -109,7 +109,6 @@ module.exports = ({ program }) => {
           process.exit()
         })
         .catch((e) => {
-          console.log(e)
           spinner.fail('Failed creating PR with Status ' + e.response.status)
           console.log(prettyjson.render(e.response.data, { keysColor: 'red' }))
 
