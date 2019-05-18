@@ -66,11 +66,14 @@ module.exports = ({ program }) => {
         responseType: 'json'
       }).then((r) => {
         spinner.succeed('Successfully created PR ' + r.data.links.html.href)
+
+        process.exit()
       }).catch((e) => {
         spinner.fail('Failed creating PR with Status ' + e.response.status)
         console.log(prettyjson.render(e.response.data, { keysColor: 'red' }))
-      })
 
+        process.exit(1) // fail
+      })
     })
 }
 
