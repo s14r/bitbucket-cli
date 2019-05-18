@@ -39,7 +39,7 @@ Create a Bitbucket PR
 Options:
   -s, --source <source>            Source Branch (default: "develop")
   -t, --target <target>            Target Branch (default: "master")
-  -r, --reviewer <reviewer>        Add one or more reviewers by username (only Username works)
+  -r, --reviewer <reviewer>        Add one or more reviewers by username (only Username works), use once with comma-separated values or multiple times
   -d, --description <description>  Describe the PR, supports Markdown
   -u, --username <username>        Username to connect to bitbucket
   -p, --password <password>        Password to connect to bitbucket
