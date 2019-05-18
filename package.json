@@ -9,6 +9,11 @@
   "bin": {
     "bitbucket-cli": "bitbucket-cli.js"
   },
+  "keywords": [
+    "bitbucket",
+    "git",
+    "cli"
+  ],
   "author": "sebric",
   "license": "MIT",
   "dependencies": {
