@@ -18,14 +18,15 @@ module.exports = ({ program }) => {
       }
     })
       .then((r) => {
-        const messages = r.data.values.map(commit => '* ' + commit.rendered.message.raw).join("")
+        const messages = r.data.values.map(commit => commit.rendered.message.raw)
+          .join("\n\n")
 
         return [
-          '**Included Messages (fetched)**',
+          '# Included Messages (combined automatically)',
           messages
-        ].join('\n\n')
+        ].join('\n\n\n')
       })
-      .catch((e) => 'No fetchable Data')
+      .catch(() => 'No fetchable Data')
   }
 
   program
