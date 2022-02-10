@@ -39,8 +39,10 @@ module.exports = ({ program }) => {
     .arguments('<work-space> <repo-slug> <filename>')
     .option('-u, --username <username>', 'Username to connect to bitbucket')
     .option('-p, --password <password>', 'Password to connect to bitbucket')
+    .option('-o, --output <output>', 'Output path for file')
     .action((workspace, repoSlug, filename, cmd) => {
-      console.log("he")
+      cmd.output ??= filename
+ 
       const spinner = ora(`Download Bitbucket Request at ${repoSlug}`).start()
 
       client = axios.create({
@@ -60,9 +62,7 @@ module.exports = ({ program }) => {
       
       client.get(`/downloads/${filename}`)
         .then((r) => {
-            writer = fs.createWriteStream(filename)
-            console.log(r.data.responseUrl)
-            downloadFile(r.data.responseUrl,"./"+filename)
+            downloadFile(r.data.responseUrl,cmd.output)
             .then((e)=>{
               spinner.succeed('Successfully Downloaded File ')
               process.exit()
@@ -70,6 +70,7 @@ module.exports = ({ program }) => {
 
         })
         .catch((e) => {
+          console.log(e);
           spinner.fail('Failed to download file ' + e.response.status + ": " + e.response.statusText)
 
           if (cmd.fail) {
