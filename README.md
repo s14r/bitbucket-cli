@@ -46,3 +46,17 @@ Options:
   --keep-branch                    Should BB keep the branch open after merge?
   -h, --help                       output usage information
 ```
+
+### bitbucket-download
+Well... It downloads a Bitbucket file from the Bitbucket Downloads
+
+```sh
+Usage: bitbucket-download [options] <repo-slug> <title> <file>
+
+Download file from bitbucket download
+
+Options:
+  -u, --username <username>        Username to connect to bitbucket
+  -p, --password <password>        Password to connect to bitbucket
+  -o, --output <output>            Output path for file
+```
