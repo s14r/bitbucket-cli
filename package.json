@@ -9,10 +9,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "docker:push": "docker buildx build . --push --platform linux/amd64,linux/arm64/v8 --tag sebric/bitbucket-cli:latest --tag sebric/bitbucket-cli:$npm_package_version"
+    "docker:build": "docker buildx build . --load --platform linux/arm64/v8 --tag sebric/bitbucket-cli:latest --tag sebric/bitbucket-cli:$npm_package_version"
   },
   "bin": {
-    "bitbucket-cli": "bitbucket-cli.js"
+    "bitbucket-cli": "index.js"
   },
   "keywords": [
     "bitbucket",
