@@ -26,7 +26,7 @@ npm install --global bitbucket-cli
 bitbucket-cli --version
 ```
 
-## Changes with v0.4.0
+## Changes with v0.5.0
 
 - `bitbucket-cli create-pull-request` is deprecated, it can still be used but will be removed in the future. You can
 now use the sub-command from the `repository` group: `bitbucket-cli repository create-pull-request`
