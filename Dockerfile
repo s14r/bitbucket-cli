@@ -1,4 +1,4 @@
-FROM node:12.2.0-alpine
+FROM node:16-alpine
 LABEL maintainer=mail@srwip.com
 
 RUN apk update && apk upgrade && \
@@ -6,6 +6,7 @@ RUN apk update && apk upgrade && \
 
 COPY package.json /opt/bitbucket-cli/
 COPY package-lock.json /opt/bitbucket-cli/
+
 WORKDIR /opt/bitbucket-cli
 RUN npm install
 
