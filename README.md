@@ -80,3 +80,12 @@ Options:
   --no-fail                  Command will not exit with code != 0 even on failure
   -h, --help                 display help for command
 ```
+
+## Building
+```bash
+docker buildx build \
+  --push \
+  --platform linux/amd64,linux/arm64/v8 \
+  --tag sebric/bitbucket-cli:latest \
+  --tag sebric/bitbucket-cli:0.5.1 
+```

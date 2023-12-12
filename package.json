@@ -1,6 +1,6 @@
 {
   "name": "bitbucket-cli",
-  "version": "0.5.1",
+  "version": "0.5.5",
   "description": "Mini Mini Mini Bitbucket CLI",
   "repository": {
     "type": "git",
@@ -8,10 +8,11 @@
   },
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docker:push": "docker buildx build . --push --platform linux/amd64,linux/arm64/v8 --tag sebric/bitbucket-cli:latest --tag sebric/bitbucket-cli:$npm_package_version"
   },
   "bin": {
-    "bitbucket-cli": "bitbucket-cli.js"
+    "bitbucket-cli": "index.js"
   },
   "keywords": [
     "bitbucket",
@@ -21,7 +22,7 @@
   "author": "sebric",
   "license": "MIT",
   "dependencies": {
-    "axios": "^0.26.0",
+    "axios": "^1.6.0",
     "commander": "^9.0.0",
     "ora": "^5.4.1",
     "prettyjson": "^1.2.5"
