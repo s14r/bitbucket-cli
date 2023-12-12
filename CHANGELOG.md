@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.5.4](https://github.com/sebric/bitbucket-cli/compare/v0.5.2...v0.5.4) (2023-12-12)
+
+
+### Bug Fixes
+
+* **PR:** fixed target branch ([3275049](https://github.com/sebric/bitbucket-cli/commit/327504949bb8faf272580540288502e7788ed690))
+
+### [0.5.3](https://github.com/sebric/bitbucket-cli/compare/v0.5.2...v0.5.3) (2023-12-12)
+
+
+### Bug Fixes
+
+* **PR:** fixed target branch ([3275049](https://github.com/sebric/bitbucket-cli/commit/327504949bb8faf272580540288502e7788ed690))
+
 ### [0.5.2](https://github.com/sebric/bitbucket-cli/compare/v0.5.1...v0.5.2) (2022-02-27)
 
 
